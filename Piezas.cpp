@@ -89,7 +89,7 @@ Piece Piezas::dropPiece(int column)
       }
    }
    //If it reaches here there wasn't a spot so return invalid
-   if (droppedPiece = false)
+   if (droppedPiece == false)
    {
       if(turn == X)
       {
