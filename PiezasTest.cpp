@@ -76,7 +76,7 @@ TEST(PiezasTest, gameStateOngoing)
   Piezas game;
   Piece result, move;
   move = game.dropPiece(2);
-	result = game.gameState()
+	result = game.gameState();
   ASSERT_EQ(result, Invalid);
 }
 
