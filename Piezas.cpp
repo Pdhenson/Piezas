@@ -62,9 +62,45 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-   int thing = column;
-   thing++;
-   return Blank;
+   bool droppedPiece = false;
+   //Check if Column is a valid play.
+   if(column > 4 || column < 0)
+   {
+     return Invalid;
+   }
+   //Place the piece if there's a spot for it.
+   for (int i = 0; i < int(board.size()); i++)
+   {
+      if(board[i][column] == Blank)
+      {
+        Piece placed = turn;
+        board[i][column] = placed;
+        droppedPiece = true;
+        
+        if(turn == X)
+        {
+          turn = O;
+        }
+        else
+        {
+          turn = X;
+        }
+        return placed;
+      }
+   }
+   //If it reaches here there wasn't a spot so return invalid
+   if (droppedPiece = false)
+   {
+      if(turn == X)
+      {
+        turn = O;
+      }
+      else
+      {
+        turn = X;
+      }
+      return Blank;
+   }
 }
 
 /**

@@ -19,6 +19,13 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
+TEST(PiezasTest, dropInvalid)
+{
+  Piezas game;
+  Piece result;
+  result = game.dropPiece(7);
+	ASSERT_EQ(result, Invalid);
+}
 
 TEST(PiezasTest, makeBoardTest)
 {
