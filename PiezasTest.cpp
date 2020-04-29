@@ -27,13 +27,23 @@ TEST(PiezasTest, dropInvalid)
   result = game.dropPiece(7);
 	ASSERT_EQ(result, Invalid);
 }
-
+//Tests that it returns the piece that was dropped if successful.
 TEST(PiezasTest, dropValid)
 {
   Piezas game;
   Piece result;
   result = game.dropPiece(2);
 	ASSERT_EQ(result, X);
+}
+
+//Tests that it switches the turn and returns O when successful.
+TEST(PiezasTest, dropValid)
+{
+  Piezas game;
+  Piece result;
+  result = game.dropPiece(2);
+  result = game.dropPiece(2);
+	ASSERT_EQ(result, O);
 }
 TEST(PiezasTest, makeBoardTest)
 {
