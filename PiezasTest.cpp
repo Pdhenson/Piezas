@@ -167,7 +167,7 @@ TEST(PiezasTest, gameStateColumnXWin)
 
 
 //Tests that O will win a Horizontal win.
-TEST(PiezasTest, gameStateColumnXWin)
+TEST(PiezasTest, gameStateColumnOWin)
 {
   Piezas game;
   Piece result, move;
