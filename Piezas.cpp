@@ -172,7 +172,7 @@ Piece Piezas::gameState()
       }
     }
     //TODO Add another case that checks all the columns first create unit test for rows.
-    if(topXscore > topOScore)
+    if(topXScore > topOScore)
     { 
       return X;
     }
