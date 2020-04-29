@@ -112,12 +112,12 @@ TEST(PiezasTest, gameStateRowOWin)
   move = game.dropPiece(1);
   move = game.dropPiece(1);
   move = game.dropPiece(0);
-  move = game.dropPiece(1);
+  move = game.dropPiece(3);
   move = game.dropPiece(2);
+  move = game.dropPiece(2);
+  move = game.dropPiece(1);
   move = game.dropPiece(3);
   move = game.dropPiece(3);
-  move = game.dropPiece(3);
-  move = game.dropPiece(0);
   move = game.dropPiece(2);
 	result = game.gameState();
   ASSERT_EQ(result, O);

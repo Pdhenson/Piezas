@@ -152,11 +152,11 @@ Piece Piezas::gameState()
       {
         if ((j + 1) < board[i].size())
         {
-          if (board[i][j] == X && board[i][j + 1] == X)
+          if (board[i][j] == X && board[i][j+1] == X)
           {
             tempXScore++;
           }
-          else if (board[i][j] == O && board[i][j + 1] == O)
+          else if (board[i][j] == O && board[i][j+1] == O)
           {
             tempOScore++;
           }
