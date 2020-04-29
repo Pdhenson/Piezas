@@ -28,7 +28,7 @@ TEST(PiezasTest, dropInvalid)
 	ASSERT_EQ(result, Invalid);
 }
 //Tests that it returns the piece that was dropped if successful.
-TEST(PiezasTest, dropValid)
+TEST(PiezasTest, dropXValid)
 {
   Piezas game;
   Piece result;
@@ -37,7 +37,7 @@ TEST(PiezasTest, dropValid)
 }
 
 //Tests that it switches the turn and returns O when successful.
-TEST(PiezasTest, dropValid)
+TEST(PiezasTest, dropOValid)
 {
   Piezas game;
   Piece result;
