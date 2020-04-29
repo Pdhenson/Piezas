@@ -18,6 +18,8 @@ TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
+
+
 TEST(PiezasTest, makeBoardTest)
 {
   Piezas game;
@@ -25,7 +27,7 @@ TEST(PiezasTest, makeBoardTest)
   {
     for (int j = 0; j < 4; j++)
     {
-      ASSERT_EQ(Blank, game.pieceAt(i,j));
+      ASSERT_EQ(game.pieceAt(i,j), Blank);
     }
   }
 }
