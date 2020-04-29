@@ -21,9 +21,9 @@ TEST(PiezasTest, sanityCheck)
 TEST(PiezasTest, makeBoardTest)
 {
   Piezas game;
-  for (int i = 0; i < int(game.board.size()); i++)
+  for (int i = 0; i < 3); i++)
   {
-    for (int j = 0; j < int(game.board[i].size()); j++)
+    for (int j = 0; j < 4; j++)
     {
       ASSERT_STREQ(Blank, game.pieceAt(i,j));
     }
