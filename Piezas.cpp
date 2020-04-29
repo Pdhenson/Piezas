@@ -49,7 +49,9 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    return Blank;
+   int thing = column;
+   thing++;
+   return Blank;
 }
 
 /**
