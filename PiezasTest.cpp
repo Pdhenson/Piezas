@@ -120,7 +120,7 @@ TEST(PiezasTest, gameStateRowOWin)
   move = game.dropPiece(0);
   move = game.dropPiece(2);
 	result = game.gameState();
-  ASSERT_EQ(result, X);
+  ASSERT_EQ(result, O);
 }
 //Tests the constructor to make sure the board is blank upon init
 TEST(PiezasTest, makeBoardTest)
