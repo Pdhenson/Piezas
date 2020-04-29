@@ -58,13 +58,7 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-  for (int i = 0; i < int(board.size()); i++)
-  {
-      for (int j = 0; j < int(board[i].size()); j++)
-      {
-        return board[i][j];
-      }
-  }
+    return board[row][column];
 }
 
 /**
