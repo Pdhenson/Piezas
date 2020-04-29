@@ -172,11 +172,11 @@ Piece Piezas::gameState()
       }
     }
     //runs through and does the same thing but this time for the columns.
-    for (int i = 0; i < int(board.size()); i++)
+    for (int i = 0; i < int(board.size() + 1);i++)
     {
       tempXScore = 0;
       tempOScore = 0;
-      for (int j = 0; j < int(board[i].size()); j++)
+      for (int j = 0; j < int(board.size()); j++)
       {
         if ((i + 1) < board.size())
         {
