@@ -31,3 +31,16 @@ TEST(PiezasTest, makeBoardTest)
     }
   }
 }
+
+TEST(PiezasTest, resetTest)
+{
+  Piezas game;
+  game.reset;
+  for (int i = 0; i < 3; i++)
+  {
+    for (int j = 0; j < 4; j++)
+    {
+      ASSERT_EQ(game.pieceAt(i,j), Blank);
+    }
+  }
+}
