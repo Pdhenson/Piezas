@@ -149,18 +149,18 @@ TEST(PiezasTest, gameStateColumnXWin)
 {
   Piezas game;
   Piece result, move;
-  move = game.dropPiece(3);
+  move = game.dropPiece(2);
   move = game.dropPiece(0);
-  move = game.dropPiece(2);
-  move = game.dropPiece(1);
-  move = game.dropPiece(2);
-  move = game.dropPiece(3);
-  move = game.dropPiece(1);
-  move = game.dropPiece(2);
-  move = game.dropPiece(2);
   move = game.dropPiece(3);
   move = game.dropPiece(1);
   move = game.dropPiece(0);
+  move = game.dropPiece(1);
+  move = game.dropPiece(2);
+  move = game.dropPiece(3);
+  move = game.dropPiece(1);
+  move = game.dropPiece(0);
+  move = game.dropPiece(2);
+  move = game.dropPiece(3);
 	result = game.gameState();
   ASSERT_EQ(result, X);
 }
