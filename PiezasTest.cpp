@@ -25,7 +25,7 @@ TEST(PiezasTest, makeBoardTest)
   {
     for (int j = 0; j < 4; j++)
     {
-      ASSERT_STREQ(Blank, game.pieceAt(i,j));
+      ASSERT_EQ(Blank, game.pieceAt(i,j));
     }
   }
 }
