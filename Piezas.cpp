@@ -178,13 +178,13 @@ Piece Piezas::gameState()
       tempOScore = 0;
       for (int j = 0; j < int(board.size()); j++)
       {
-        if ((i + 1) < board.size())
+        if ((j + 1) < board.size())
         {
-          if (board[j][i] == X && board[j][i + 1] == X)
+          if (board[j][i] == X && board[j+1][i] == X)
           {
             tempXScore++;
           }
-          else if (board[j][i] == O && board[i][i + 1] == O)
+          else if (board[j][i] == O && board[j+1][i] == O)
           {
             tempOScore++;
           }
