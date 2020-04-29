@@ -208,10 +208,7 @@ Piece Piezas::gameState()
     {
       return O;
     }
-    else if (topOScore == topXScore)
-    {
-      return Blank;
-    }
+    //if it reaches here then it's a tie.
     return Blank;
   }
 }
