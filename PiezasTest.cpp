@@ -14,7 +14,6 @@ class PiezasTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
-//Tests go here
 TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
