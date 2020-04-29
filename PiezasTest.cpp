@@ -165,6 +165,27 @@ TEST(PiezasTest, gameStateColumnXWin)
   ASSERT_EQ(result, X);
 }
 
+
+//Tests that O will win a Horizontal win.
+TEST(PiezasTest, gameStateColumnXWin)
+{
+  Piezas game;
+  Piece result, move;
+  move = game.dropPiece(0);
+  move = game.dropPiece(1);
+  move = game.dropPiece(3);
+  move = game.dropPiece(2);
+  move = game.dropPiece(0);
+  move = game.dropPiece(1);
+  move = game.dropPiece(3);
+  move = game.dropPiece(3);
+  move = game.dropPiece(2);
+  move = game.dropPiece(1);
+  move = game.dropPiece(2);
+  move = game.dropPiece(0);
+	result = game.gameState();
+  ASSERT_EQ(result, O);
+}
 //Tests the constructor to make sure the board is blank upon init
 TEST(PiezasTest, makeBoardTest)
 {
