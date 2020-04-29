@@ -88,7 +88,7 @@ Piece Piezas::dropPiece(int column)
         return placed;
       }
    }
-   //If it reaches here there wasn't a spot so return invalid
+   //If it reaches here there wasn't a spot so return Blank 
    if (droppedPiece == false)
    {
       if(turn == X)
@@ -123,5 +123,24 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
-    return Blank;
+   int xScore = 0;
+   int oScore = 0;
+   bool gameOver = true;
+   //Run through the entire board and see if there are any blank spots left.
+   for (int i = 0; i < int(board.size()); i++)
+   {
+       for (int j = 0; j < int(board[i].size()); j++)
+       {
+            if (board[i][j] == Blank)
+            {
+               gameOver = false;
+               return Invalid;
+            }
+       }
+   }
+   if (gameOver = true)
+   {
+      
+   }
+  return Blank;
 }

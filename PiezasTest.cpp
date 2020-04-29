@@ -69,6 +69,18 @@ TEST(PiezasTest, dropFullORetBlank)
   result = game.dropPiece(2);
 	ASSERT_EQ(result, Blank);
 }
+
+//Tests that the game is not yet over.
+TEST(PiezasTest, gameStateOngoing)
+{
+  Piezas game;
+  Piece result, move;
+  move = game.dropPiece(2);
+	result = game.gameState()
+  ASSERT_EQ(result, Invalid);
+}
+
+//Tests the constructor to make sure the board is blank upon init
 TEST(PiezasTest, makeBoardTest)
 {
   Piezas game;
@@ -81,9 +93,13 @@ TEST(PiezasTest, makeBoardTest)
   }
 }
 
+//Tests wether or not the board gets reset.
 TEST(PiezasTest, resetTest)
 {
   Piezas game;
+  Piece result;
+
+  result = game.dropPiece(2);
   game.reset();
   for (int i = 0; i < 3; i++)
   {
