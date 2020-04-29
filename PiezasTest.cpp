@@ -19,6 +19,7 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
+//Tests if column is a valid number--in this case it is not.
 TEST(PiezasTest, dropInvalid)
 {
   Piezas game;
@@ -27,6 +28,13 @@ TEST(PiezasTest, dropInvalid)
 	ASSERT_EQ(result, Invalid);
 }
 
+TEST(PiezasTest, dropValid)
+{
+  Piezas game;
+  Piece result;
+  result = game.dropPiece(2);
+	ASSERT_EQ(result, X);
+}
 TEST(PiezasTest, makeBoardTest)
 {
   Piezas game;
