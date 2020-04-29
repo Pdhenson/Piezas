@@ -122,6 +122,27 @@ TEST(PiezasTest, gameStateRowOWin)
 	result = game.gameState();
   ASSERT_EQ(result, O);
 }
+
+//Tests that the result will be Blank when it's a tie.
+TEST(PiezasTest, gameStateRowTie)
+{
+  Piezas game;
+  Piece result, move;
+  move = game.dropPiece(0);
+  move = game.dropPiece(0);
+  move = game.dropPiece(1);
+  move = game.dropPiece(1);
+  move = game.dropPiece(2);
+  move = game.dropPiece(2);
+  move = game.dropPiece(3);
+  move = game.dropPiece(3);
+  move = game.dropPiece(0);
+  move = game.dropPiece(2);
+  move = game.dropPiece(1);
+  move = game.dropPiece(3);
+	result = game.gameState();
+  ASSERT_EQ(result, Blank);
+}
 //Tests the constructor to make sure the board is blank upon init
 TEST(PiezasTest, makeBoardTest)
 {
