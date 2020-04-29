@@ -46,7 +46,7 @@ TEST(PiezasTest, dropOValid)
 	ASSERT_EQ(result, O);
 }
 
-//Tests if the column is full when dropping a value
+//Tests if the column is full when X isdropping a value
 TEST(PiezasTest, dropFullXRetBlank)
 {
   Piezas game;
@@ -57,6 +57,7 @@ TEST(PiezasTest, dropFullXRetBlank)
   result = game.dropPiece(2);
 	ASSERT_EQ(result, Blank);
 }
+//Tests if the column is full when O is dropping a value
 TEST(PiezasTest, dropFullORetBlank)
 {
   Piezas game;
@@ -80,6 +81,26 @@ TEST(PiezasTest, gameStateOngoing)
   ASSERT_EQ(result, Invalid);
 }
 
+//Tests that the X will win if it has more X's adjacent on a row
+TEST(PiezasTest, gameStateRowXWin)
+{
+  Piezas game;
+  Piece result, move;
+  move = game.dropPiece(0);
+  move = game.dropPiece(0);
+  move = game.dropPiece(1);
+  move = game.dropPiece(0);
+  move = game.dropPiece(2);
+  move = game.dropPiece(1);
+  move = game.dropPiece(3);
+  move = game.dropPiece(1);
+  move = game.dropPiece(2);
+  move = game.dropPiece(3);
+  move = game.dropPiece(2);
+  move = game.dropPiece(3);
+	result = game.gameState();
+  ASSERT_EQ(result, X);
+}
 //Tests the constructor to make sure the board is blank upon init
 TEST(PiezasTest, makeBoardTest)
 {
