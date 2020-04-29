@@ -160,7 +160,6 @@ Piece Piezas::gameState()
           {
             tempOScore++;
           }
-          board[i][j] 
         }
         if(tempXScore > topXScore)
         {
