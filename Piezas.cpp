@@ -171,14 +171,46 @@ Piece Piezas::gameState()
         }
       }
     }
-    //TODO Add another case that checks all the columns first create unit test for rows.
+    //runs through and does the same thing but this time for the columns.
+    for (int i = 0; i < int(board.size()); i++)
+    {
+      tempXScore = 0;
+      tempOScore = 0;
+      for (int j = 0; j < int(board[i].size()); j++)
+      {
+        if ((i + 1) < board.size())
+        {
+          if (board[j][i] == X && board[j][i + 1] == X)
+          {
+            tempXScore++;
+          }
+          else if (board[j][i] == O && board[i][i + 1] == O)
+          {
+            tempOScore++;
+          }
+        }
+        if(tempXScore > topXScore)
+        {
+          topXScore = tempXScore;
+        }
+        if(tempOScore > topOScore)
+        {
+          topOScore = tempOScore;
+        }
+      }
+    }
+    //checks the two scores and outputs the winner
     if(topXScore > topOScore)
     { 
       return X;
     }
-    if(topOScore > topXScore)
+    else if(topOScore > topXScore)
     {
       return O;
+    }
+    else if (topOScore == topXScore)
+    {
+      return Blank;
     }
     return Blank;
   }
