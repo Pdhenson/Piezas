@@ -23,7 +23,10 @@
 Piezas::Piezas()
 {
   board.resize(3);
-  board.resize(4);
+  for (int i = 0; i < int(board.size()); i++)
+  {
+    board[i].resize(4);
+  }
   for (int i = 0; i < int(board.size()); i++)
   {
       for (int j = 0; j < int(board[i].size()); j++)
