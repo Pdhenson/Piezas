@@ -45,6 +45,18 @@ TEST(PiezasTest, dropOValid)
   result = game.dropPiece(2);
 	ASSERT_EQ(result, O);
 }
+
+//Tests if the column is full when dropping a value
+TEST(PiezasTest, dropFullRetBlank)
+{
+  Piezas game;
+  Piece result;
+  result = game.dropPiece(2);
+  result = game.dropPiece(2);
+  result = game.dropPiece(2);
+  result = game.dropPiece(2);
+	ASSERT_EQ(result, Blank);
+}
 TEST(PiezasTest, makeBoardTest)
 {
   Piezas game;
