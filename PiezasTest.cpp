@@ -103,7 +103,7 @@ TEST(PiezasTest, gameStateRowXWin)
 }
 
 //Tests the O will win if it has more O's adjacent on a row
-TEST(PiezasTest, gameStateRowXWin)
+TEST(PiezasTest, gameStateRowOWin)
 {
   Piezas game;
   Piece result, move;
