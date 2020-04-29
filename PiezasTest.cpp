@@ -18,3 +18,14 @@ TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
+TEST(PiezasTest, makeBoardTest)
+{
+  Piezas game;
+  for (int i = 0; i < int(game.board.size()); i++)
+  {
+    for (int j = 0; j < int(game.board[i].size()); j++)
+    {
+      ASSERT_STREQ(Blank, game.board[i][j]);
+    }
+  }
+}
